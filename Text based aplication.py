@@ -38,7 +38,7 @@ def stukje3():
         stukje12()
 
     else:
-        print("")
+        print("ongeldig antwoord")
 
 def stukje4():
     print("Je wist niet wat je had gezien dus ga je onderzoek plegen. Je pakt je slippers en loopt naar buiten om te kijken of de gemuteerde iets heeft achtergelaten.")
@@ -47,6 +47,16 @@ def stukje4():
     time.sleep(3)
     print("A: Scannen voor vingerafdrukken ")
     print("B: Het wapen uittesten ")
+    vraag = input()
+    if vraag in answer_A: 
+       stukje8()
+
+    elif vraag in answer_B:
+        stukje5
+
+    else:
+        print("ongeldig antwoord")
+
 
 def stukje5():
     print("Natuurlijk gaan we het wapen uittesten, kijken hoe krachtig het is. Je puzzelt om erachter te komen hoe het wapen werkt.")
@@ -54,7 +64,33 @@ def stukje5():
     time.sleep(3)
     print("A: Binnen")
     print("B: Buiten")
-    
+    vraag = input()
+    if vraag in answer_A:
+        stukje6()
+
+    elif vraag in answer_B:
+        stukje6()
+
+    else:
+        print("ongeldig antwoord")
+
+def stukje6():
+    print(" Ik ga het wapen testen. Wat kan er fout gaan. PANG je schiet het wapen zonder na te denken en") 
+    print("er vormt een explosie die door de hele buurt te horen is. Dit zorgt gelijk voor meer problemen.") 
+    print("Want je ziet meerdere gemuteerde komen. Wat doe je.")
+    time.sleep(3)
+    print("A: Schieten op de groep gemuteerde")
+    print("B: Wegrijden met de auto") 
+    vraag = input()
+    if vraag in answer_A:
+        stukje10()
+
+    elif vraag in answer_B:
+        stukje11()
+        
+    else:
+        print("ongeldig antwoord")
+
 def intro():
     print("Je kijkt je favoriete programma en schrik je plotseling van een harde bonk op de deur.")
     print("Je besluit via het boven raam te kijken wie het is.") 
@@ -75,6 +111,6 @@ def intro():
         stukje1()
 
     else:
-        print("")
+        print("ongeldig antwoord")
 
 intro()
